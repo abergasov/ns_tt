@@ -58,9 +58,9 @@ In this case calculation different:
 so it will be something like:
 ```go
 map[string]map[uint64]uint64{
-	"user@mail.com_eth": map[uint64]uint64{
-	    "2022.11.04".Unix(): 1000000000000000123, // date, reward sum	
-	    "2022.11.05".Unix(): 1000000000000000123, // date, reward sum	
+    "user@mail.com_eth": map[uint64]uint64{
+        "2022.11.04".Unix(): 1000000000000000123, // date, reward sum	
+        "2022.11.05".Unix(): 1000000000000000123, // date, reward sum	
     },
     "user@mail.com_sol": map[uint64]uint64{
         "2022.11.04".Unix(): 1000000000000000123, // date, reward	
