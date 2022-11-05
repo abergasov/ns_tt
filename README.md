@@ -28,8 +28,8 @@ if we need get userX rewards for assetY in epochZ - we simply get hash of this c
 
 assume, that from validator we get reward list for user in epoch X is like:
 ```go
-map[int64]int64{
-    1667640738: 1000000000000000123, // epochID, reward
+map[int64]uint64{
+    1667640738: 1000000000000000123, // epochID, reward in Wei
 } 
 ```
 > total size of such struct not less than `8 * 2 = 16 bytes`
@@ -59,12 +59,12 @@ so it will be something like:
 ```go
 map[string]map[uint64]uint64{
     "user@mail.com_eth": map[uint64]uint64{
-        "2022.11.04".Unix(): 1000000000000000123, // date, reward sum	
-        "2022.11.05".Unix(): 1000000000000000123, // date, reward sum	
+        "2022.11.04".Unix(): 1000000000000000123, // date, reward sum in Wei
+        "2022.11.05".Unix(): 1000000000000000123, // date, reward sum in Wei	
     },
     "user@mail.com_sol": map[uint64]uint64{
-        "2022.11.04".Unix(): 1000000000000000123, // date, reward	
-        "2022.11.05".Unix(): 1000000000000000123, // date, reward sum	
+        "2022.11.04".Unix(): 1000000000000000123, // date, reward sum in Wei	
+        "2022.11.05".Unix(): 1000000000000000123, // date, reward sum in Wei	
     },
 }
 ``` 
